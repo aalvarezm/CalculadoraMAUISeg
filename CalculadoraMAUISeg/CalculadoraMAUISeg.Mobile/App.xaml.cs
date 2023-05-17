@@ -6,7 +6,14 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            //var navPage = new NavigationPage(new ContentPageDemo());//Para decirle al proyecto, por cuál pagina debe de iniciar
+            //navPage.BarBackgroundColor = Colors.Chocolate;
+            //navPage.BarTextColor = Colors.White;
+            //MainPage = navPage;
+
+            MainPage = new NavigationPage(new FlyoutPageDemo());       
+
+             
         }
     }
 }
