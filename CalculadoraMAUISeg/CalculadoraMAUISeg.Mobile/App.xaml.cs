@@ -1,4 +1,6 @@
-﻿namespace CalculadoraMAUISeg.Mobile
+﻿using CalculadoraMAUISeg.Mobile.MVVM.View;
+
+namespace CalculadoraMAUISeg.Mobile
 {
     public partial class App : Application
     {
@@ -11,7 +13,7 @@
             //navPage.BarTextColor = Colors.White;
             //MainPage = navPage;
 
-            MainPage = new NavigationPage(new FlyoutPageDemo());       
+            MainPage = new NavigationPage(new ViewCalculadora());       
 
              
         }
