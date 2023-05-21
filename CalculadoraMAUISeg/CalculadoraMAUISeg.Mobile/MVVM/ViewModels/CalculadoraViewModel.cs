@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using System.Windows.Input;
-using Microsoft.Maui.Controls;
 
 namespace CalculadoraMAUISeg.Mobile.MVVM.ViewModels
 {
@@ -82,7 +81,15 @@ namespace CalculadoraMAUISeg.Mobile.MVVM.ViewModels
                         result = _firstNumber * secondNumber;
                         break;
                     case "/":
-                        result = _firstNumber / secondNumber;
+                        try
+                        {
+                            result = _firstNumber / secondNumber;
+                        }
+                        catch (DivideByZeroException e)
+                        {
+
+                            string message = e.Message;
+                        }
                         break;
                 }
 
